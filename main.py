@@ -114,8 +114,10 @@ def download_model():
     # Ensure the directory exists
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
     
-    url = 'YOUR_MODEL_URL'
+    url = "https://drive.google.com/file/d/1SpnLk-axJvjNtUyzorK7-RsfzlflM2vT/view?usp=sharing"
     gdown.download(url, model_path, quiet=False)
+
+
 
 
 # Call this function before loading the model
