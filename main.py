@@ -93,6 +93,8 @@
 #     main()
 
 import streamlit as st
+import os
+os.system("pip install opencv-python-headless")
 import cv2
 import numpy as np
 import tempfile
