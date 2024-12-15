@@ -104,6 +104,22 @@ from player_ball_assigner import PlayerBallAssigner
 from camera_movement_estimator import CameraMovementEstimator
 from view_transformer import ViewTransformer
 from speed_and_distance_estimator import SpeedAndDistance_Estimator
+import os
+import gdown
+
+def download_model():
+    model_path = "models/best.pt"
+    if not os.path.exists(model_path):
+        print("Downloading model file...")
+        # Google Drive file URL
+        url = "https://drive.google.com/file/d/1SpnLk-axJvjNtUyzorK7-RsfzlflM2vT/view?usp=sharing"
+        gdown.download(url, model_path, quiet=False)
+    else:
+        print("Model file already exists.")
+
+# Call this function before loading the model
+download_model()
+
 
 
 # Updated read_video function
