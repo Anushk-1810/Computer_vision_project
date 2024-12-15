@@ -107,34 +107,30 @@ from view_transformer import ViewTransformer
 from speed_and_distance_estimator import SpeedAndDistance_Estimator
 import os
 import gdown
+import time
 
+def download_model(model_url, model_path):
+    # Check if the model file already exists
+    if not os.path.exists(model_path):
+        try:
+            print("Downloading the model...")
+            # Ensure the models directory exists
+            os.makedirs(os.path.dirname(model_path), exist_ok=True)
+            
+            # Download the model from Google Drive
+            gdown.download(model_url, model_path, quiet=False, fuzzy=True)
+            print(f"Model downloaded successfully to {model_path}")
+        except Exception as e:
+            print(f"Error during download: {str(e)}")
+    else:
+        print(f"Model already exists at {model_path}, skipping download.")
 
-import gdown
-import os
+# URL of the model from Google Drive (Make sure it's the correct direct link)
+model_url = "https://drive.google.com/uc?id=1DC2kCygbBWUKheQ_9cFziCsYVSRw6axK"  # Replace with your actual link
+model_path = "models/best.pt"  # Path where the model should be saved
 
+download_model(model_url, model_path)
 
-def download_model():
-    # Define the path where the model will be saved
-    model_path = 'models/best.pt'
-    
-    # Ensure the 'models' directory exists
-    os.makedirs(os.path.dirname(model_path), exist_ok=True)
-    
-    # Google Drive link for downloading the model
-    url = 'https://drive.google.com/uc?id=1DC2kCygbBWUKheQ_9cFziCsYVSRw6axK'
-    
-    # Download the model file from Google Drive
-    gdown.download(url, model_path, quiet=False, fuzzy=True)
-    
-    print(f"Model downloaded successfully to {model_path}")
-
-
-
-
-
-
-# Call this function before loading the model
-download_model()
 
 
 
