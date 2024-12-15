@@ -114,7 +114,7 @@ def download_model():
     # Ensure the directory exists
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
     
-    url = "https://drive.google.com/file/d/1SpnLk-axJvjNtUyzorK7-RsfzlflM2vT/view?usp=sharing"
+    url = "https://drive.google.com/file/d/1DC2kCygbBWUKheQ_9cFziCsYVSRw6axK/view?usp=drive_link"
     gdown.download(url, model_path, quiet=False)
 
 
