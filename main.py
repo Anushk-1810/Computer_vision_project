@@ -112,16 +112,21 @@ import gdown
 import gdown
 import os
 
+
 def download_model():
+    # Define the path where the model will be saved
     model_path = 'models/best.pt'
     
-    # Ensure the directory exists
+    # Ensure the 'models' directory exists
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
-
-    url = 'https://drive.google.com/uc?id=1DC2kCygbBWUKheQ_9cFziCsYVSRw6axK'  # Correct Google Drive URL
-
-    # Download the model using gdown
+    
+    # Google Drive link for downloading the model
+    url = 'https://drive.google.com/uc?id=1DC2kCygbBWUKheQ_9cFziCsYVSRw6axK'
+    
+    # Download the model file from Google Drive
     gdown.download(url, model_path, quiet=False, fuzzy=True)
+    
+    print(f"Model downloaded successfully to {model_path}")
 
 
 
