@@ -1,7 +1,6 @@
 gdown==5.2.0
 numpy==2.2.0
-opencv_python==4.9.0.80
-opencv-python-headless==4.9.0.24
+opencv_python_headless==4.8.0.74
 pandas==2.2.3
 scikit_learn==1.6.0
 streamlit==1.32.2
