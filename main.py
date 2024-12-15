@@ -107,7 +107,6 @@ from view_transformer import ViewTransformer
 from speed_and_distance_estimator import SpeedAndDistance_Estimator
 import os
 import gdown
-import time
 
 def download_model(model_url, model_path):
     # Check if the model file already exists
