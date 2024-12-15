@@ -1,8 +1,8 @@
-gdown==5.2.0
-numpy==2.2.0
+gdown
+numpy
 opencv_python_headless
-pandas==2.2.3
-scikit_learn==1.6.0
-streamlit==1.32.2
-supervision==0.9.0
-ultralytics==8.1.29
+pandas
+scikit_learn
+streamlit
+supervision
+ultralytics
