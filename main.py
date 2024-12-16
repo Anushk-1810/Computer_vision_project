@@ -106,30 +106,7 @@ from camera_movement_estimator import CameraMovementEstimator
 from view_transformer import ViewTransformer
 from speed_and_distance_estimator import SpeedAndDistance_Estimator
 import os
-import gdown
 
-def download_model():
-    # Define the path where the model will be saved
-    model_path = 'models/best.pt'
-    
-    # Ensure the 'models' directory exists
-    os.makedirs(os.path.dirname(model_path), exist_ok=True)
-    
-    # Google Drive link for downloading the model
-    url = 'https://drive.google.com/uc?id=1DC2kCygbBWUKheQ_9cFziCsYVSRw6axK'
-    
-    # Download the model file from Google Drive
-    gdown.download(url, model_path, quiet=False, fuzzy=True)
-    
-    print(f"Model downloaded successfully to {model_path}")
-
-
-
-
-
-
-# Call this function before loading the model
-download_model()
 
 
 
@@ -171,7 +148,7 @@ def main():
         video_frames = read_video(uploaded_file)
 
         # Initialize Tracker
-        tracker = Tracker('models/best.pt')
+        tracker = Tracker('best.pt')
 
         # Object Tracking
         st.write("Tracking objects...")
