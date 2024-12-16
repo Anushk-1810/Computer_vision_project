@@ -6,6 +6,6 @@ scikit_learn
 streamlit
 supervision
 ultralytics
-torch
+torch==2.2.0
 torchvision
 torchaudio
